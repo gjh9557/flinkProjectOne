@@ -1,0 +1,8 @@
+创建Kafka 主题
+bin/kafka-topics.sh --create --zookeeper node245:2181/kafka --replication-factor 1 --partitions 1 --topic hot
+开启消费者脚本观察写入的情况
+bin/kafka-console-consumer.sh --zookeeper node245:2181/kafka --from-beginning --topic hot
+生产数据
+bin/kafka-console-producer.sh --broker-list node245:9092 --topic hot
+
+
